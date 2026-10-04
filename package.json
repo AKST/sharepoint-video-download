@@ -1,0 +1,14 @@
+{
+  "name": "sharepoint-video-dl",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Safari extension that turns a SharePoint video page into a download.",
+  "scripts": {
+    "build": "scripts/build.sh",
+    "typecheck": "tsc --noEmit",
+    "install:safari": "scripts/install.sh"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

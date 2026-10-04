@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "SharePoint Video Downloader",
+  "version": "1.0.1",
+  "description": "Turns a SharePoint video page into a direct download, by handing the file to that site's own download.aspx.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.sharepoint.com/*"
+  ],
+  "action": {
+    "default_title": "Download this SharePoint video",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "64": "icons/icon-64.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png",
+    "512": "icons/icon-512.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Download the video on this page"
+    }
+  }
+}
